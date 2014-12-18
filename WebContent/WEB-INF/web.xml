@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    id="WebApp_ID" version="2.5">
+
+
+<servlet>
+    <servlet-name>ActionServlet</servlet-name>
+    <servlet-class>ajaxdemo.ActionServlet</servlet-class>
+    <init-param>
+     <param-name>sleep-time-in-seconds</param-name>
+     <param-value>10</param-value>
+   </init-param>
+   <load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ActionServlet</servlet-name>
+    <url-pattern>/ActionServlet/*</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ActionServlet_select</servlet-name>
+    <servlet-class>ajaxdemo.ActionServlet_select</servlet-class>
+    <init-param>
+     <param-name>sleep-time-in-seconds</param-name>
+     <param-value>10</param-value>
+   </init-param>
+   <load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ActionServlet_select</servlet-name>
+    <url-pattern>/ActionServlet_select/*</url-pattern>
+</servlet-mapping>
+
+<welcome-file-list>
+  		<welcome-file>/WEB-INF/index.jsp</welcome-file>
+</welcome-file-list>
+	
+
+</web-app>
